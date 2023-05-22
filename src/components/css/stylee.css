@@ -1,0 +1,151 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css);
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  "Jost", sans-serif;
+  }
+  body{
+background: #f3f2ef;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+align-items: center;
+width: 100vw;
+height: 100vh;
+font-family:  "Jost", sans-serif;
+
+  }
+  html{
+    height: 100%;
+    font-size: 100%;
+    background: #eee;
+  }
+.box{
+    width: 20vw;
+    height: 60vh;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.2);
+    position: relative;
+    background: #a5bbdd;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+    min-width: 20rem;
+    min-height: 25rem;
+}
+.inputfield{
+    justify-content: center;
+    align-items: center;
+   
+    margin:3rem;
+    width: 15rem;
+    height: 3rem;
+    border-radius: 5px 5px 5px 5px;
+    text-transform: capitalize;
+
+}
+.info{
+    /* width: 15rem; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 10rem;
+    
+    /* background-color: aquamarine; */
+}
+strong{
+    font-size: 3rem;
+    text-transform: capitalize;
+       }
+      
+.fas{
+    /* background-color:pink; */
+    color: white;
+    font-size: 3rem;
+    font-weight: bolder;
+    animation: right-left 2s alternate-reverse infinite linear;
+    
+
+
+}
+.noError{
+    color: black;
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Jost',sans-serif;
+}
+.wave{
+    opacity: 0.3;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    background-color: white;
+    width: 60rem;
+    height: 80rem;
+    margin-left: -20rem;
+    margin-top: -15rem;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift 5000ms infinite linear;
+    z-index: 1;
+
+}
+
+.wave-three{
+    opacity: 0.2;
+    z-index: 2;
+    animation: drift 5000ms infinite linear;
+
+}
+.wave-two{
+    opacity: 0.1;
+    z-index: 3;
+    animation: drift 7000ms infinite linear;
+
+}
+.box::after{
+    content: "";
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    transform: translate3d(0,0,0);
+}
+@-webkit-keyframes right-left{
+    
+    0% {
+        transform: translatex(3px);
+      }
+      100%{
+        transform: translatex(-3px);
+      }
+    }
+    
+@keyframes right-left{
+    
+    0% {
+        transform: translatex(3px);
+      }
+      100%{
+        transform: translatex(-3px);
+      }
+    }
+    
+
+@keyframes drift{
+    from{
+        transform: rotate(0deg);
+    }
+from{
+    transform: rotate(360deg);
+}
+}
